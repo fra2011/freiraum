@@ -38,6 +38,9 @@ class AppKernel extends Kernel
             new Contao\ListingBundle\ContaoListingBundle(),
             new Contao\NewsBundle\ContaoNewsBundle(),
             new Contao\NewsletterBundle\ContaoNewsletterBundle(),
+            new Contao\CoreBundle\HttpKernel\Bundle\ContaoModuleBundle('easy_category', $this->getRootDir()),
+            new Contao\CoreBundle\HttpKernel\Bundle\ContaoModuleBundle('easy_extension', $this->getRootDir()),
+            new Contao\CoreBundle\HttpKernel\Bundle\ContaoModuleBundle('freiraum_projects', $this->getRootDir())
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {
